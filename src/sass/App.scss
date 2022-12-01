@@ -1,6 +1,9 @@
+@import './base/variables';
+@import './base/mixins';
 @import './components/layout';
 @import './components/header';
 @import './components/footer';
+@import './components/banner';
 @import './components/products';
 @import './components/checkout';
 @import './components/information';

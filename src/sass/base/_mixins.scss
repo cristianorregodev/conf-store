@@ -1,0 +1,27 @@
+@mixin phone {
+      @media (min-width: $phone) {
+            @content;
+      }
+}
+@mixin tablet {
+      @media (min-width: $tablet) {
+            @content;
+      }
+}
+@mixin tablet-alt {
+      @media (min-width: $tablet-alt) {
+            @content;
+      }
+}
+@mixin desktop {
+      @media (min-width: $desktop) {
+            @content;
+      }
+}
+@mixin white-gradient {
+      background: linear-gradient(
+            to right,
+            $white 0%,
+            rgba(255, 255, 255, 0) 100%
+      );
+}

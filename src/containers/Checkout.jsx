@@ -17,9 +17,14 @@ export const Checkout = () => {
     return sum;
   };
   return (
-    <div className="checkout">
+    <section className="checkout">
       <div className="checkout-content">
         {cart.length > 0 ? <h3>Lista de pedidos</h3> : <h3>No hay pedidos</h3>}
+        {cart.length > 0 ? null : (
+          <Link to="/" className="go-back">
+            <button>Ver productos</button>
+          </Link>
+        )}
 
         {cart.map((item) => (
           <div className="checkout-item" key={item.title}>
@@ -41,6 +46,6 @@ export const Checkout = () => {
           </Link>
         </div>
       )}
-    </div>
+    </section>
   );
 };

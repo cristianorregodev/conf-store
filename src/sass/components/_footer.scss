@@ -1,4 +1,11 @@
 footer {
       display: flex;
+      background-color: $primary-color;
       justify-content: space-between;
+      align-items: center;
+      color: $white;
+      padding: 0 20px;
+      @include tablet-alt {
+            padding: 0 120px;
+      }
 }

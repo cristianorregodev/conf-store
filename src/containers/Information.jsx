@@ -24,6 +24,12 @@ export const Information = () => {
     addToBuyer(buyer);
     navigate('/checkout/payment');
   };
+  const handleSumTotal = () => {
+    const reducer = (accumulator, currentValue) =>
+      accumulator + currentValue.price;
+    const sum = cart.reduce(reducer, 0);
+    return sum;
+  };
   return (
     <div className="information">
       <div className="information-content">
@@ -32,15 +38,40 @@ export const Information = () => {
         </div>
         <div className="information-form">
           <form ref={form}>
-            <input type="text" name="name" placeholder="Nombre completo" />
-            <input type="email" name="email" placeholder="Correo electrónico" />
-            <input type="text" name="address" placeholder="Dirección" />
-            <input type="text" name="apto" placeholder="Apto" />
-            <input type="text" name="city" placeholder="Ciudad" />
-            <input type="text" name="country" placeholder="País" />
-            <input type="text" name="state" placeholder="Estado" />
-            <input type="text" name="postalCode" placeholder="Código postal" />
-            <input type="text" name="phone" placeholder="Telefono" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Nombre completo"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo electrónico"
+              required
+            />
+            <input
+              type="text"
+              name="address"
+              placeholder="Dirección"
+              required
+            />
+            <input type="text" name="apto" placeholder="Apto" required />
+            <input type="text" name="city" placeholder="Ciudad" required />
+            <input type="text" name="country" placeholder="País" required />
+            <input
+              type="text"
+              name="state"
+              placeholder="Departamento"
+              required
+            />
+            <input
+              type="text"
+              name="postalCode"
+              placeholder="Código postal"
+              required
+            />
+            <input type="text" name="phone" placeholder="Telefono" required />
           </form>
         </div>
         <div className="information-buttons">
@@ -64,6 +95,12 @@ export const Information = () => {
             </div>
           </div>
         ))}
+        <div className="information-item">
+          <div className="information-element">
+            <h4>Total</h4>
+            <span>${handleSumTotal()}</span>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,45 @@
+.main-banner {
+      padding: 20px;
+      background-color: $background-color;
+      @include tablet-alt {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            padding: 0 120px;
+            height: 80vh;
+      }
+      .banner-text {
+            text-align: center;
+            @include tablet-alt {
+                  text-align: left;
+            }
+            h1 {
+                  text-transform: capitalize;
+                  font-size: 30px;
+                  @include tablet-alt {
+                        font-size: 50px;
+                        margin: 0;
+                  }
+            }
+      }
+
+      figure {
+            width: 80%;
+            @include tablet-alt {
+                  width: 100%;
+
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 0;
+                  margin: 0;
+            }
+            img {
+                  width: 100%;
+                  @include tablet-alt {
+                        width: 400px;
+                  }
+            }
+      }
+}

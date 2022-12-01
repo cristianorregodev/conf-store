@@ -1,17 +1,36 @@
 .payment {
-      grid-template-columns: 3fr 1fr;
-      grid-gap: 2rem;
-      grid-row-gap: 1.5em;
-      display: grid;
+      width: 90%;
+      margin: 80px auto;
+      min-height: 55vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .payment-content {
+            width: 100%;
+            @include tablet {
+                  width: 600px;
+            }
+            h3 {
+                  text-align: center;
+                  font-size: 30px;
+            }
+            .payment-item {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 15px;
+            }
+            .payment-button {
+                  margin-top: 50px;
+            }
+      }
 }
 .payment-back {
       margin: 10px 0 0 0;
 }
-.payment-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-}
+
 .payment-item .fas {
       margin: 0 0 0 10px;
       color: rgba(0, 0, 0, 0.4);

@@ -20,7 +20,6 @@ export const Payment = () => {
   };
 
   const handlePaymentSuccess = (data) => {
-    console.log(data);
     if (data.status === 'COMPLETED') {
       const newOrder = {
         buyer,
@@ -38,7 +37,6 @@ export const Payment = () => {
     const sum = cart.reduce(reducer, 0);
     return sum;
   };
-
   return (
     <div className="payment">
       <div className="payment-content">
@@ -51,6 +49,12 @@ export const Payment = () => {
             </div>
           </div>
         ))}
+        <div className="payment-item">
+          <div className="payment-element">
+            <h4>Total</h4>
+            <span>$ {handleSumTotal()}</span>
+          </div>
+        </div>
         <div className="payment-button">
           <PayPalButton
             paypalOptions={paypalOptions}

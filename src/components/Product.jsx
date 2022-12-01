@@ -12,7 +12,7 @@ export const Product = ({ product, handleAddToCart }) => {
         <p>{product.description}</p>
       </div>
       <button type="button" onClick={handleAddToCart(product)}>
-        Comprar
+        Comprar <i className="fas fa-shopping-basket"></i>
       </button>
     </div>
   );

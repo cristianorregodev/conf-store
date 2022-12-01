@@ -1,21 +1,29 @@
 .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000000;
       display: flex;
+      background-color: $primary-color;
       justify-content: space-between;
-}
-.header-checkout {
-      display: flex;
-      justify-content: space-evenly;
       align-items: center;
-      justify-items: center;
-      width: 30px;
-      margin: 0 0 0 0.5em;
-}
-.header-alert {
-      color: #33b13a;
-      font-size: 14px;
-      margin-left: 5px;
-}
-.header a {
-      text-decoration: none;
-      color: #33b1ff;
+      padding: 0 20px;
+      @include tablet-alt {
+            padding: 0 120px;
+      }
+      .header-checkout {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            justify-items: center;
+            margin: 0 0 0 0.5em;
+            .header-alert {
+                  color: $white;
+                  font-size: 14px;
+                  margin-left: 5px;
+            }
+      }
+      a {
+            text-decoration: none;
+            color: $white;
+      }
 }
